@@ -1,0 +1,38 @@
+#include "pch.h"
+#include <iostream>
+using namespace std;
+
+struct Complex
+{
+	float real;
+	float imaginar;
+};
+
+Complex Produs(Complex a1, Complex a2)
+{
+	Complex rezultat;
+
+	rezultat.real = a1.real*a2.real - a1.imaginar*a2.imaginar;
+	rezultat.imaginar = a1.imaginar*a2.real + a1.real*a2.imaginar;
+
+	return rezultat;
+
+}
+
+int main()
+{
+	Complex a1, a2, p;
+	cout << "Introduceti partea reala si partea imaginara a primului numar complex: " << endl;
+	cin >> a1.real;
+	cin >> a1.imaginar;
+	cout << "Introduceti partea reala si partea imaginara a celui de-al doilea numar complex: " << endl;
+	cin >> a2.real;
+	cin >> a2.imaginar;
+
+	p = Produs(a1, a2);
+	cout << "Produsul celor doua numere complexe este: " << p.real << "+ i*" << p.imaginar<<endl;
+
+	system("pause");
+	return 0;
+
+}
